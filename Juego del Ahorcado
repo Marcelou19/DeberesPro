@@ -1,0 +1,34 @@
+def ahorcado():
+    palabraSecreta = "DORMIR"
+    intentos = 5
+    palabraAdivinada = "_" * len(palabraSecreta)
+
+    while intentos > 0 and palabraAdivinada != palabraSecreta:
+        print("BIENVENIDO AL JUEGO DEL AHORCADO")
+        print("LA PALABRA TIENE:", palabraAdivinada)
+        print("SOLO TIENES ESTOS INTENTOS:", intentos)
+        letra = input("INGRESA LA LETRA: ").upper()
+        letraCorrecta = False
+
+        nueva_palabra = list(palabraAdivinada)
+        for i in range(len(palabraSecreta)):
+            if palabraSecreta[i] == letra:
+                nueva_palabra[i] = letra
+                letraCorrecta = True
+        
+        palabraAdivinada = "".join(nueva_palabra)
+
+        if not letraCorrecta:
+            intentos -= 1
+            print("LO SIENTO, ESA NO ES LA LETRA")
+        else:
+            print("GENIAL, ESA ES UNA LETRA")
+
+        input("Presiona Enter para continuar...")
+
+    if palabraAdivinada == palabraSecreta:
+        print("BIEN HECHO, ADIVINASTE LA PALABRA:", palabraSecreta)
+    else:
+        print("LO LAMENTO, PERDISTE. LA PALABRA ERA:", palabraSecreta)
+
+ahorcado()
