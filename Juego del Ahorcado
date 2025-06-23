@@ -1,8 +1,8 @@
-   palabraSecreta = "DORMIR" #Aqui definimos la palabra que va a adivinar
-    intentos = 5 #es la antidad de intentos que tiene el juegador 
-    palabraAdivinada = "_" * len(palabraSecreta) #la palabra es remplazada con el simbolo _
+palabraSecreta = "DORMIR" #Aqui definimos la palabra que va a adivinar
+intentos = 5 #es la antidad de intentos que tiene el juegador 
+palabraAdivinada = "_" * len(palabraSecreta) #la palabra es remplazada con el simbolo _
 
-    while intentos > 0 and palabraAdivinada != palabraSecreta: #hace que empiece el contador de intentos empiece en 0
+while intentos > 0 and palabraAdivinada != palabraSecreta: #hace que empiece el contador de intentos empiece en 0
         #interfaz que tiene el usuario al momento que va a jugar dando indicaciones 
         print("BIENVENIDO AL JUEGO DEL AHORCADO")
         print("LA PALABRA TIENE:", palabraAdivinada)
@@ -26,7 +26,7 @@
 #precionar enter para poder pasar de proceso 
         input("Presiona Enter para continuar...")
 #condicional para que el usuario sepa si gano o perdio el juego 
-    if palabraAdivinada == palabraSecreta:
+if palabraAdivinada == palabraSecreta:
         print("BIEN HECHO, ADIVINASTE LA PALABRA:", palabraSecreta)
-    else:
+else:
         print("LO LAMENTO, PERDISTE. LA PALABRA ERA:", palabraSecreta)
